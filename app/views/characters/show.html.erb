@@ -1,0 +1,7 @@
+<h1><%= @character.name %></h1>
+<img src="<%= image_path @character.images.first.image_file_name %>" />
+<p>Real Name: <%= @character.real_name %></p>
+<p>Gender: <%= @character.gender == 'm' ? 'Male' : 'Female' %></p>
+<p>Alignment: <%= @character.alignment.capitalize %></p>
+<p>Powers: <%= @character.powers.map { |p| p.name }.join(', ') %></p>
+<p><img src="<%= @power_rank %>" /></p>

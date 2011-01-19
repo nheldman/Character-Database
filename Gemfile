@@ -6,6 +6,9 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'gchartrb'
+gem 'formtastic'
+gem 'paperclip'
 
 group :development do
   gem 'rspec-rails'

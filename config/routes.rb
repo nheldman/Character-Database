@@ -1,6 +1,6 @@
 CharacterDatabase::Application.routes.draw do
   get "pages/home"
-
+  resources :characters
   root :to => "pages#home"
 
   # The priority is based upon order of creation:

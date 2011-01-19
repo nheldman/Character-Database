@@ -1,0 +1,17 @@
+<%= semantic_form_for @character, :html => {:multipart => true} do |form| %>
+  <%= form.input :name %>
+  <%= form.input :real_name %>
+  <%= form.input :gender %>
+  <%= form.input :alignment %>
+  <%= form.input :energy_projection, :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :strength,          :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :durability,        :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :fighting_skill,    :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :intelligence,      :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :speed,             :as => :radio, :collection => [1,2,3,4,5,6,7] %>
+  <%= form.input :powers,            :as => :check_boxes %>
+  <% form.semantic_fields_for :images do |image| %>
+    <%= image.input :image, :as => :file %>
+  <% end %>
+  <%= form.buttons %>
+<% end %>
